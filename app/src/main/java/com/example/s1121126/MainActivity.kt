@@ -60,8 +60,21 @@ fun Birth(m: Modifier) {
             label = { Text("姓名") },
             placeholder = { Text("請輸入您的姓名") }
         )
+        TextField(
+            value = userWeight.toString(),
+            onValueChange = { newText ->
+                if (newText == ""){
+                    userWeight = 0
+                }
+                else{userWeight = newText.toInt()}
+            },
+            label = { Text("出生體重") },
+            keyboardOptions = KeyboardOptions
+                (keyboardType = KeyboardType.Number)
+        )
 
-        Text("您輸入的姓名是：$userName")
+
+        Text("您輸入的姓名是：$userName\n出生體重為：$userWeight 公克")
     }
 
 }
