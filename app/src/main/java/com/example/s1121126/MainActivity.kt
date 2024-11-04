@@ -25,6 +25,7 @@ import androidx.compose.material3.Button
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.ui.text.input.KeyboardType
 
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +46,28 @@ class MainActivity : ComponentActivity() {
     }
 }
 @Composable
-fun Birth(m: Modifier){
+fun Birth(m: Modifier) {
+    var userName by remember { mutableStateOf("吳容陞") }
+    var userWeight by remember { mutableStateOf(3800) }
+
+    Column {
+        TextField(
+            value = userName,
+            onValueChange = { newText ->
+                userName = newText
+            },
+            modifier = m,
+            label = { Text("姓名") },
+            placeholder = { Text("請輸入您的姓名") }
+
+        )
+
+        Text("您輸入的姓名是：$userName")
+    }
 
 }
+
+
+
+
 
