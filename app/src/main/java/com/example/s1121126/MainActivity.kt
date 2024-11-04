@@ -106,7 +106,9 @@ fun Birth(m: Modifier) {
             }) {
                 Text("新增/修改資料")
             }
-            Button(onClick = {  }) {
+            Button(onClick = {
+
+            }) {
                 Text("查詢資料")
             }
             Button(onClick = {  }) {
