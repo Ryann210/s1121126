@@ -109,6 +109,14 @@ fun Birth(m: Modifier) {
 }
 
 
+data class Person(
+    var userName: String,
+    var userWeight: Int,
+    var userPassword: String
+)
+
+
+
 
 
 
